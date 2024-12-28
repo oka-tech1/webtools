@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+
+{%block title%}success{%endblock%}
+
+{%block content%}
+<style>
+body{
+  background-color:black;
+  background-image: url('/static/giff.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100% 25%;
+  background-attachment:fixed;
+
+}
+
+img {
+border-radius:20px;
+}
+</style>
+<center><h1 style="color:white;">Order Placed Successfully, Thanks</br>please Fill the form below.</h1>
+<p><a style="background-color:black;" href="/account">Home</a></p>
+</center>
+{%endblock%}

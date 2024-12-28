@@ -1,0 +1,118 @@
+{%extends 'base.html'%}
+{%load static%}
+{%load crispy_forms_tags%}
+
+
+{%block title%}wallet{%endblock%}
+
+{%block content%}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="{%static 'static.css'%}">
+<style>
+body{
+  background-color:black;
+  background-image: url('/static/giff.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100% 35%;
+  background-attachment:fixed;
+}
+
+img {
+  border-radius: 40px;
+  position:center;
+}
+
+p {
+color:white;
+background-color:black;
+width:400px;
+border-radius:10px;
+font-family:vadana;
+}
+
+a {
+background-color:white;
+width:400px;
+border-radius:5px;
+font-family:vadana;
+font-size:14px;
+}
+
+h1 {
+color:white;
+background-color:blue;
+width:700px;
+border-radius:10px;
+font-family:vadana;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=email], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button{
+color:black;
+background-color:#375BDC;
+font-size:20px;
+border-radius:8px;
+font-family:vadana;
+}
+</style>
+
+
+<center>
+<p>Deposit made to the below BITCOIN address will be processed and verified by admins. Your wallet will be credited after verifications</p>
+
+<!----------------------------Javascript cod to copy address------------->
+
+    <img src="{%static 'btc.png'%}" alt="avatar" width="40" heigh="40"></br></br>
+    <button class="btn btn-primary" onclick="copyText()">Copy Bitcoin Address</button>
+    <br/>
+    <h8 style="color:white;">Deposit BITCOIN to this address</h8><br/>
+    <script>
+        function copyText() {
+
+            /* Copy text into clipboard */
+            navigator.clipboard.writeText
+                ("saksjasjaksjasajslajlsaslasalskalskals");
+        }
+    </script></br>
+<!----------------------------Javascript cod to copy address------------->
+
+<h1>Enter transaction details after deposit.</h1>
+
+<div class="card">
+<form method='post' enctype="multipart/form-data">
+{%csrf_token%}
+<center>
+{{form|crispy}}</br>
+</center>
+<button type='submit' class="btn btn-primary">Submit</button>
+</form>
+</div>
+{%endblock%}

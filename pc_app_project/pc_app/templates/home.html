@@ -1,0 +1,182 @@
+{%extends 'master.html'%}
+{%load static%}
+{%block title%}home{%endblock%}
+
+{%block content%}
+<style>
+h6 {
+background-color:black;
+width:700;
+height:100px;
+font-family:vadana;
+font-size:15;
+border-radius:7px;
+}
+
+h1{
+background-color:white;
+color:white;
+width:600;
+border-radius:20px;
+font-family:vadana;
+}
+ 
+image {
+  border-radius: 50px;
+}
+
+h4 {
+color:red;
+background-color:black;
+width:400;
+border-radius:20px;
+}
+
+h8 {
+color:red;
+background-color:black;
+width:70px;
+border-radius:8px;
+}
+
+
+h2{
+background-color:black;
+width:600;
+border-radius:20px;
+}
+</style>
+
+
+<center>
+<style>
+img {
+  border-radius: 30px;
+}
+</style>
+
+<style>
+body{
+  background-image: url('/static/off.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+</style>
+
+<style>
+a {
+background-color:black;
+color:white;
+font-size:18;
+font-family:vadana;
+border-radius:7px;
+}
+</style>
+
+<style>
+h1 {
+color:black;
+font-family:vadana;
+
+}
+</style>
+<center>
+<div class="topnav">
+<img src="{%static 'dra1.webp'%}" alt="avatar" width="90" height="80"></br>
+<h8>Dragon-Wares❤️‍🔥️</h8>
+</div>
+</center>
+<!----------------------------------------------------------->
+
+<h1>Welcome to Dragon-Wares</h1>
+
+<form method="get" action="/pc_stores">
+<div class="mycard">
+<input placeholder="search anything" type="text">
+<button type="submit" class="">Search</button>
+</div>
+</form>
+<!----------------------------------------------------------->
+<h2 style="color:white;">Services Found in Forums</h2>
+<!----------------------------------------------------------->
+
+<div class="mycard">
+<p style="color:black;">Sales of hacking softwares and gadgets</p>
+</div>
+<div class="topnav">
+<img src="{%static 'gadg.jpeg'%}" alt="avatar" width="150" height="150">&nbsp;&nbsp; 
+<img src="{%static 'gadg1.jpeg'%}" alt="avatar" width="150" height="150">&nbsp;&nbsp; 
+<img src="{%static 'gadg3.jpeg'%}" alt="avatar" width="150" height="150"> 
+<h6 style="color:white;"></br>We sell varieties of hacking software </br>And hardware tools with advance encryption algorithm using secured payment system.</h6></div></br>
+<a href="/forum">Join Forums</a></br></br>
+<!----------------------------------------------------------->
+
+
+<div class="mycard">
+<p style="color:black;">Exploitation of Computers</p>
+</div>
+<div class="topnav">
+<img src="{%static 'hack.jpeg'%}" alt="avatar" width="150" height="150">&nbsp;&nbsp; 
+<img src="{%static 'hack1.jpeg'%}" alt="avatar" width="150" height="150">&nbsp;&nbsp; 
+<img src="{%static 'hack2.jpeg'%}" alt="avatar" width="150" height="150"> 
+<h6 style="color:white;"></br>We offer varieties of computer related hacking service</br>We also use escrow for forum transactions for transparency.</h6></div></br>
+<a href="/forum">Join Forums</a></br></br>
+<!----------------------------------------------------------->
+
+
+<div class="mycard">
+<p style="color:black;">Web application and Software Development </p>
+</div>
+<div class="topnav">
+<img src="{%static 'dev.jpeg'%}" alt="avatar" width="150" height="150">&nbsp;&nbsp; 
+<img src="{%static 'dev2.jpeg'%}" alt="avatar" width="150" height="150">&nbsp;&nbsp; 
+<img src="{%static 'dev3.jpeg'%}" alt="avatar" width="150" height="150"> 
+<h6 style="color:white;"></br>We build responsive web apps and custom softwares to meet client choice at an affordable prices.</br>We also ensure the continoues integration of the application for long term performances.</h6></div></br><a href="/forum">Look up our portfolio</a></br></br>
+<!----------------------------------------------------------->
+
+<div class="mycard">
+<p style="color:black;">Home delivery service</p>
+</div>
+<img src="{%static 'deliver1.webp'%}" alt="avatar" width="150" height="150">&nbsp;&nbsp; 
+<img src="{%static 'deliver.jpeg'%}" alt="avatar" width="150" height="150"> 
+<img src="{%static 'goods3.jpeg'%}" alt="avatar" width="150" height="150">&nbsp;&nbsp; 
+<h6 style="color:white;"></br>We get your ordered goods delivered to your door step at a very fast space. We have the best and most compentent dispatcher around the globe</br> ensuring safe and fast delivery of product being ordered by our esteem customers.</h6></br></br>
+<!----------------------------------------------------------->
+
+<div class="mycard">
+<p style="color:black;">Web Security Analysis</p>
+</div>
+<div class="img">
+<img src="{%static 'webs.jpeg'%}" alt="avatar" width="150" height="150">&nbsp;&nbsp; 
+<img src="{%static 'web.png'%}" alt="avatar" width="150" height="150">&nbsp;&nbsp; 
+<img src="{%static 'webs1.jpeg'%}" alt="avatar" width="150" height="150"></br></br></br> 
+<h6 style="color:white;"></br>We have the most compentent and the best security engineers working 24/7 hours oncovering vulnerabilities</br>This is to ensure that each product and Apps are safeguarded.</h6><a href="/forum">Meet our staffs</a></br></br>
+</div>
+</center>
+
+
+<center>
+<div class="topnav">
+<h4>YOUR GADGETS GOT LOST OR STOLEN 📵️??</h4>
+<p>We offer most premium services ranging from mobile phone and computer tracking services<p>
+<img src="{%static 'track.jpeg'%}" alt="avatar" width="150" height="150">&nbsp;&nbsp; 
+<img src="{%static 'track1.jpeg'%}" alt="avatar" width="150" height="150"> 
+<img src="{%static '200.gif'%}" alt="avatar" width="150" height="150">&nbsp;&nbsp; 
+<h4>With the IMEI (International Mobile Equipment Identity) of the lost or stolen device and the SERIAL number of the lost or stolen computer,</br>our experts engineers can track and apprehend the exact location of the lost phone and computer around the globe.</h4>
+</div></br></br></br>
+
+
+<div class="topnav">
+<h4>TRACK YOUR GOODS ON DELIVERY!!</h4>
+<p>With our tracker build with integrated google API, you can track any of your goods in transit</p>
+<img src="{%static 'goods3.jpeg'%}" alt="avatar" width="150" height="150">&nbsp;&nbsp; 
+<img src="{%static 'goods1.jpeg'%}" alt="avatar" width="width="150" height="150">
+<img src="{%static 'track.jpeg'%}" alt="avatar" width="150" height="150">&nbsp;&nbsp; 
+<p style="color:red;">Got any goods on delivery? <a href="/forum">TRACK IT HERE</a></p></div></br></br></br> 
+
+<a href="/accounts/login/">LOGIN</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/signup">SIGNUP</a><h10 style="color:white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright©️2024</h10>
+</p></div></br></br></br>
+</center>
+{%endblock%}

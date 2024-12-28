@@ -1,0 +1,43 @@
+{%extends 'base.html'%}
+{%load static%}
+
+
+{%block title%}hardware tools{%endblock%}
+
+{%block content%}
+<link rel="stylesheet" href="{%static 'static.css'%}">
+<style>
+body{
+  background-color:black;
+  background-image: url('/static/giff.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100% 35%;
+  background-attachment:fixed;
+}
+
+img {
+  border-radius: 40px;
+  position:center;
+}
+
+a {
+  background-color:white;
+  border-radius:8px;
+}
+
+
+h1 {
+   background-color:blue;
+   border-radius:8px;
+   width:auto;
+
+}
+
+</style>
+
+
+<center><h1 style="color:black;">Hardware Store</h1>
+    <p style="color:white;">No hardware tool available in store for now. </p>
+    <h4 style="color:white;">You can logout and click on the "Contact Us" button and tell us about the hardware tool you looking forward to secure.</h4>
+</center>
+{%endblock%}

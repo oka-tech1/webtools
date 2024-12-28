@@ -1,0 +1,33 @@
+{%extends 'base.html'%}
+
+{%block title%}success{%endblock%}
+
+
+{%block content%}
+<style>
+body{
+  background-color:black;
+  background-image: url('/static/giff.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100% 35%;
+  background-attachment:fixed;
+}
+
+img {
+  border-radius: 40px;
+  position:center;
+}
+
+p {
+color:white;
+background-color:black;
+width:400px;
+border-radius:10px;
+font-family:vadana;
+}
+</style>
+
+
+<center><h5 style="color:white;">Transaction Detail Submitted Successfully, Thanks.</br>Transaction status will be reflected in your Account History shortly. </h5></center>
+<center><a href="/history">CHECK YOUR HISTORY FOR STATUS</a></center>
+{%endblock%}

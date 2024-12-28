@@ -1,0 +1,66 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block title%}{{details.name}} details{%endblock%}
+
+{%block content%}
+<link rel="stylesheet" href="{%static 'static.css'%}">
+<style>
+body{
+  background-color:black;
+  background-image: url('/static/giff.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100% 25%;
+  background-attachment:fixed;
+}
+
+h3 {
+background-color:black;
+color:white;
+border-radius:15px;
+font-size:17px;
+}
+
+
+img {
+border-radius:15px;
+}
+
+p {
+color:blue;
+background-color:black;
+width:150px;
+border-radius:10px;
+font-family:vadana;
+}
+
+h1 {
+color:blue;
+background-color:black;
+width:700px;
+border-radius:10px;
+font-family:vadana;
+}
+
+
+a {
+background-color:blue;
+border-radius:5px;
+font-family:vadana;
+font-size:14px;
+}
+</style>
+
+<center>
+<h1>Dragon-Ware Store</h1>
+<div class="card">
+<h4>You are about to order</h4>
+    <p>{{details.name}}</p>
+    <p><img src="{{details.img.url}}" alt="avatar" height="100" width="150"</p>
+    <p><img src="{{details.img1.url}}" alt="avatar" height="100" width="150"</p>
+<h4>For the price of</h4>
+    <p>{{details.Price}}$</p>
+    <a style="color:white;" href="/buy/{{details.id}}/">Buy Now</a>&nbsp;&nbsp; <a style="color:white;" href="/pc_stores">Back to Store</a>
+</center>
+</div>    
+{%endblock%}

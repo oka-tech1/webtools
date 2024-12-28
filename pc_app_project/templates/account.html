@@ -1,0 +1,213 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block title%}homepage{%endblock%}
+
+{%block content%}
+<link rel="stylesheet" href="{%static 'static.css'%}">
+
+<style>
+body{
+  background-color:black;
+  background-image: url('/static/giff2.gif');
+  background-repeat: no-repeat;
+  background-size: 100% 40%;
+  background-attachment:fixed;
+
+}
+
+
+h9 {
+color:black;
+background-color:blue;
+border-radius:10px;
+margin:0 1.5%;
+font-size:14px;
+}
+
+
+h8{
+color:blue;
+background-color:blue;
+border-radius:10px;
+margin:0 1.5%;
+font-size:14px;
+
+}
+
+h3{
+color:red;
+background-color:blue;
+font-size:2px;
+width:750px;
+}
+
+img {
+  border-radius: 50px;
+  position:center;
+  opacity: 0.5;
+  float:right;
+  margin: 0 2%;
+}
+
+h1 {
+color:white;
+background-color:black;
+width:600px;
+border-radius:10px;
+font-family:vadana;
+}
+
+h4 {
+color:white;
+background-color:black;
+width:600px;
+border-radius:10px;
+font-family:vadana;
+font-size:20px;
+}
+
+
+h5{
+color:white;
+background-color:black;
+width:500px;
+text-align:center;
+height:70px;
+border-radius:20px;
+align-content:left;
+}
+
+h7 {
+margin-left: 10px;
+}
+
+a{
+background-color:white;
+color:white;
+border-radius:5px;
+font-family:vadana;
+font-size:14px;
+}
+
+h6 {
+color: purple;
+background-color: blue;
+width:115;
+height:45px;
+font-size:13px;
+font-family:vadana;
+text-align:center;
+border-radius:16px;
+margin: 0 3%;
+}
+
+button {
+color:blue;
+font-size:17px;
+background-color:black;
+border-radius:7px;
+font-family:vadana;
+margin-right:-350px;
+font-size:13px;
+margin:0 1.5%;	
+}
+
+h2{
+color:white;
+font-family:vadana;
+background-color:blue;
+width:300px;
+height:100px;
+text-align:center;
+border-radius:30px;
+font-size:20px;
+}
+
+left {
+
+}
+
+</style>
+
+<center>
+<h1>Welcome to Dragon-Wares</h1>
+</center>
+<h7 style="color:red;">&nbsp;&nbsp;&nbsp;ADMIN 🗨️</h7><h5></br>Hey {{user.username}}!!&nbsp;{{request.user.profile.mesg}}</h5>
+
+<center>
+<h3>------------------------------------------------------------------</h3>
+{%if user.is_authenticated%}
+    <h2></br>👤️</br>Hi, {{user.username}}</h2></p>
+</center>
+
+<center>
+<div class="card">
+<p style="color:blue;">Wallet Balance</p>
+<h6 style="color:white;"></br>{{user.profile.bonus}}$</h6>
+<a style="background-color:black;" href="/hardware">Hardware store</a>&nbsp;
+<a style="background-color:black;" href="/mywallet">Request Bonus</a></br></br></br>
+<a style="background-color:black;" href="/pc_stores">Software Store</a>
+    <form action="{%url 'logout'%}" method="post">
+    {%csrf_token%}</br>
+    <button type="submit">Logout here</button>
+    </form>
+</div></br>
+</center>
+<!------------------------------------------------------------->
+<center>
+<h3>------------------------------------------------------------------</h3>
+
+    <h4>Products Categories and Prices</h4>
+    <p>{{request.user.profile.names}}</p>
+    
+    <div class="contains">
+    <img src="{%static 'soft.jpeg'%}" alt="avatar" width="180" height="180">&nbsp;&nbsp;
+    <img src="{%static 'soft1.jpeg'%}" alt="avatar" width="180" height="180"></br></br> 
+    <p style="color:white;">Software Categories hacking tools.</p>
+    <a style="background-color:white;" href="/pc_stores">Check Softwares</a></br></br></br></br>
+    </div></br></br>
+    
+    <div class="contains1"> 
+ 
+    <img src="{%static 'hard.jpeg'%}" alt="avatar" width="180" height="180">&nbsp;&nbsp;
+    <img src="{%static 'hard1.jpeg'%}" alt="avatar" width="180" height="180"></br></br>
+    <p style="color:white;">Hardware Categories for hardware systems.</p>
+    <a style="background-color:white;" href="/hardware">Check Hardwares</a></br></br></br></br>
+    </div></br></br></br>
+    
+    <div class="topnav">
+    <p>@Dragon-Ware institute of information and technology, we are thrief to announce to the general public about the ongoing web base project aim at integrating various API in order to link different applications around the world for easier communication.</p>
+    </div></br></br></br> 
+    
+    <h1>Hacking Forums</h1>
+
+     <h2></br>Cracking Kings 🤖️🛠️</h2>
+   <div class="contains1"> 
+    <img src="{%static 'crack.jpeg'%}" alt="avatar" width="250" height="200">&nbsp;&nbsp;
+    <p style="color:white;">Cracking kings forums for </br>specialised software application cracking</p>
+    <a style="background-color:white;" href="/forum">Join Forum</a></br></br></br></br>
+   </div></br></br></br></br></br>
+
+
+    <h2></br>WebSploit 🛠️🤖️</h2> 
+   <div class="contains1"> 
+    <img src="{%static 'webh.png'%}" alt="avatar" width="250" height="200">&nbsp;&nbsp;
+    <p style="color:white;">Concern with the exploitation of web and its framworks.</br>Learn the art of web application exploitations.</p>
+    <a style="background-color:white;" href="/forum">Join Forum</a></br></br></br></br>
+    </br></br>
+   </div></br></br></br></br> 
+     <form action="{%url 'logout'%}" method="post">
+    {%csrf_token%}</br>
+    <button type="submit" class="btn btn-primary">Logout here</button>
+    </form></br>
+    <h10 style="color:white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright©️2024</h10>
+    </br></br></br>
+   </center>
+
+
+{%else%}
+    <p>you are not login, please login</p>
+    <p style="color:purple;">Login to your account to experience gucci vibe<p p style="color:blue;"><a href="/accounts/login/">Login</a></p></p>
+{%endif%}    
+{%endblock%}

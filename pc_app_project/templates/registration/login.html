@@ -1,0 +1,108 @@
+{%load crispy_forms_tags%}
+{%load static%}
+<html>
+<title>Login Page</title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="{%static 'static.css'%}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+button{
+color:black;
+background-color:#375BDC;
+font-size:20px;
+border-radius:8px;
+font-family:vadana;
+}
+a {
+background-color:black;
+border-radius:5px;
+font-family:vadana;
+font-size:16px;
+}
+
+p{
+background-color:#375BDC;
+color:black;
+width:270px;
+border-radius:7px;
+}
+
+h2 {
+font-family:vadana;
+color:black;
+}
+
+
+h1{
+font-family:vadana;
+}
+
+input[type=text], select {
+  width: 35%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=password], select {
+  width: 35%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+}
+input[type=password], select {
+  width: 35%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+
+}
+
+body {
+background-color:lightgray;
+}
+
+body{
+  background-image: url('/static/giff3.gif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+</style>
+</head>
+
+<body>
+<center>
+<div class="topnav">
+<h2>OkaTech Online Store</h2>
+</div></br></br>
+<h5 style="color:white;">Login to access the full features of DragonWares forum.</h5>
+<div class="card">
+<h4 style="color:black;">Login to Account</h4>
+<center>
+<form method="post" class="">
+{% csrf_token %}
+{{form|crispy}}
+<button type="submit" class="btn btn-primary">Login</button>
+</form>
+<center>
+<p>Dont have account? <a href="/signup">Signup</a></p>
+<a href="/">Back Home</a></br></br>
+</div>
+</center>
+</body>
+<html>

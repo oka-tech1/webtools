@@ -1,0 +1,35 @@
+{%extends 'base.html'%}
+
+{%block title%}insufficient funds{%endblock%}
+
+{%block content%}
+<style>
+body{
+  background-color:black;
+  background-image: url('/static/giff.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100% 30%;
+  background-attachment:fixed;
+}
+
+a {
+background-color:white;
+border-radius:5px;
+}
+
+p {
+background-color:blue;
+color:black;
+border-radius:10px;
+width:200px;
+height:60px;
+text-align:center;
+font-family:vadana;
+}
+
+</style>
+
+<center><h1 style="color:red;">You dont have enough funds for purchase</h1>
+<h4 style="color:white;">Your Wallet Balance is</h4><p></br>{{request.user.profile.bonus}}$</p>
+<a style="color:blue;" href="/mywallet">Fund Wallet</a></br></br></center>
+{%endblock%}

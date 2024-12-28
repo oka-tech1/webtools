@@ -1,0 +1,73 @@
+{%extends 'master.html'%}
+{%load crispy_forms_tags%}
+{%load static%}
+
+{%block title%}contact us{%endblock%}
+
+{%block content%}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="{%static 'static.css'%}">
+<style>
+body{
+  background-image: url('/static/off3.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+<style>
+input[type=email], select {
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+body {
+background-color:lightgray;
+}
+
+h1{
+font-family:vadana;
+background-color:black;
+color:white;
+border-radius:15px;
+width:500px;
+}
+ button {
+ color:black;
+ background-color:blue;
+ width:80px;
+ height:35px;
+ border-radius:10px;	
+ 
+ }
+</style>
+
+
+<center></br>
+<h1>Drop us a message for admin response.</h1>
+</center>
+<div class="card">
+<form method='post' class=''>
+{%csrf_token%}
+{{form|crispy}}</br>
+<center>
+<button type='submit' class="btn btn-primary">Submit</button>
+</form>
+</center>
+</div>
+{%endblock%}

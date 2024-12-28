@@ -1,0 +1,31 @@
+{%extends 'master.html'%}
+
+{%block title%}success creation{%endblock%}
+
+{%block content%}</br></br></br>
+<style>
+body{
+  background-color:black;
+  background-image: url('/static/giff.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100% 25%;
+  background-attachment:fixed;
+}
+
+a {
+background-color:black;
+color:black;
+width:400px;
+border-radius:5px;
+font-family:vadana;
+font-size:14px;
+}
+
+</style>
+
+<div class="card">
+<center><h1>Account Created Successfully.</h1>
+<a href="/accounts/login">Login to account</a>
+</div>
+</center>
+{%endblock%}

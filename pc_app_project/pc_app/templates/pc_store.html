@@ -1,0 +1,64 @@
+{%extends 'base.html'%}
+{%load static%}
+
+
+{%block title%}computer store{%endblock%}
+
+{%block content%}
+<link rel="stylesheet" href="{%static 'static.css'%}">
+<style>
+body{
+  background-color:black;
+  background-image: url('/static/giff.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100% 35%;
+  background-attachment:fixed;
+}
+
+img {
+  border-radius: 40px;
+  position:center;
+}
+
+p {
+color:blue;
+background-color:black;
+width:200px;
+border-radius:10px;
+font-family:vadana;
+}
+
+a {
+background-color:white;
+width:400px;
+border-radius:5px;
+font-family:vadana;
+font-size:14px;
+}
+
+h1 {
+color:white;
+background-color:blue;
+width:700px;
+border-radius:10px;
+font-family:vadana;
+}
+</style>
+<center>
+<h1>Dragon-Wares Store</h1>
+<input placeholder="search anything" type="text">
+<button type="submit">Search</button>
+</form>
+{%for pc_store in object_list%}
+<div  class="card">	
+<p>{{pc_store.name}}</p>
+<h3>Price: {{pc_store.Price}}$</h3>
+<center><img src="{{pc_store.img.url}}" alt="avater" height="220" width="300"></center></br>
+<h3>{{pc_store.Description}}</h3>
+<a style="background-color:black;" href="pc_details/{{pc_store.id}}">Order</a>&nbsp;&nbsp;&nbsp;&nbsp; <a style="background-color:black;" href="/account">Home</a></br></br>
+
+</div>
+
+{%endfor%}
+
+{%endblock%}

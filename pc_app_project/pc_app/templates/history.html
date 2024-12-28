@@ -1,0 +1,36 @@
+{%extends 'base.html'%}
+
+{%block title%}success{%endblock%}
+
+{%block content%}
+<style>
+body{
+  background-color:black;
+  background-image: url('/static/giff.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment:fixed;
+}
+
+img {
+border-radius:30px;
+}
+
+a {
+background-color:white;
+color:white;
+border-radius:5px;
+}
+</style>
+
+<center><h2 style="color:white;">Your transaction Slip Appears here</h2>
+<div class="container">
+<h6 style="color:red;">{{request.user.wallet.time}}</h6></br>
+<img src="{{request.user.wallet.screen.url}}" width="200" height="200">
+<p style="color:black;">Name: {{request.user.wallet.Enter_name}}</p>
+<p style="color:black;">Amount: {{request.user.wallet.Deposit_amount}}₦</p>
+<p style="color:black;">Email: {{request.user.wallet.Enter_email}}</p>
+<p style="color:blue;">STATUS: {{request.user.wallet.status}}</p>
+</div>
+</center>
+{%endblock%}
